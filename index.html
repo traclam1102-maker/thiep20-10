@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng 20/10 - Tập Thể 10A11 🌸</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Hiệu ứng hoa & trái tim rơi */
+        .falling-element {
+            position: absolute;
+            top: -10%;
+            font-size: 1.5rem;
+            animation: fall linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(105vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Khung thiệp */
+        .card-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(240, 98, 146, 0.3);
+            max-width: 650px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            border: 3px solid #f8bbd0;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .card-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .floral-corner {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 2rem;
+            pointer-events: none;
+        }
+        .top-left { top: 15px; left: 15px; }
+        .top-right { top: 15px; right: 15px; }
+        .bottom-left { bottom: 15px; left: 15px; }
+        .bottom-right { bottom: 15px; right: 15px; }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ec407a, #f48fb1);
+            color: #fff;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(236, 64, 122, 0.2);
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #d81b60;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: #880e4f;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .divider {
+            height: 2px;
+            width: 60px;
+            background: #f48fb1;
+            margin: 0 auto 25px auto;
+            border-radius: 2px;
+        }
+
+        .message-content {
+            font-size: 1.05rem;
+            color: #4a148c;
+            line-height: 1.8;
+            text-align: justify;
+            background: #fff5f8;
+            padding: 25px;
+            border-radius: 16px;
+            border-left: 4px solid #ec407a;
+            margin-bottom: 25px;
+        }
+
+        .message-content p {
+            margin-bottom: 12px;
+        }
+
+        .message-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .btn-heart {
+            background: linear-gradient(45deg, #d81b60, #ff4081);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(216, 27, 96, 0.35);
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .btn-heart:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(216, 27, 96, 0.5);
+        }
+
+        .secret-box {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f3e5f5;
+            border-radius: 12px;
+            color: #4a148c;
+            font-size: 1rem;
+            font-weight: 600;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer-text {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: #ad1457;
+            font-weight: 600;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        const symbols = ['🌸', '🌷', '✨', '💖', '🌺', '💕'];
+        for (let i = 0; i < 25; i++) {
+            let el = document.createElement('div');
+            el.className = 'falling-element';
+            el.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            el.style.left = Math.random() * 100 + 'vw';
+            el.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            el.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(el);
+        }
+    </script>
+
+    <div class="card-container">
+        <div class="floral-corner top-left">🌸</div>
+        <div class="floral-corner top-right">🌷</div>
+        <div class="floral-corner bottom-left">🌺</div>
+        <div class="floral-corner bottom-right">🌸</div>
+
+        <span class="badge">CHÀO MỪNG 20/10</span>
+        <h1>Chúc Mừng Ngày Phụ Nữ Việt Nam</h1>
+        <h2>Thân gửi các bạn nữ xinh đẹp lớp 10A11 ✨</h2>
+        
+        <div class="divider"></div>
+
+        <div class="message-content">
+            <p>Mới ngày nào bước vào mái trường cấp 3 còn bao bỡ ngỡ và ngại ngùng, nhờ có sự dịu dàng, rạng rỡ và những nụ cười luôn thường trực của các bạn mà 10A11 đã nhanh chóng trở thành ngôi nhà thứ hai đầy ấm áp.</p>
+            <p>Nhân ngày Phụ nữ Việt Nam 20/10, chúc toàn thể các con gái 10A11 luôn duyên dáng, tươi trẻ, học thật giỏi và đạt thật nhiều điểm 10 rực rỡ trong năm học lớp 10 này!</p>
+            <p>Cảm ơn các bạn vì đã luôn là những mảnh ghép ngọt ngào, rực rỡ và không thể thiếu của đại gia đình 10A11!</p>
+        </div>
+
+        <button class="btn-heart" onclick="toggleSecret()">Bấm vào đây để mở quà bí mật! 💌</button>
+
+        <div class="secret-box" id="secretBox">
+            🎁 <strong>Gửi các cô gái 10A11:</strong> Chúc các bạn luôn tỏa sáng theo cách riêng của mình. Hãy luôn xinh đẹp, tự tin và cùng nhau tạo nên thật nhiều kỷ niệm đẹp trong 3 năm cấp 3 sắp tới nhé! 💖🎉
+        </div>
+
+        <div class="footer-text">
+            ~ From các bạn nam 10A11 with lots of love ~
+        </div>
+    </div>
+
+    <script>
+        function toggleSecret() {
+            var box = document.getElementById('secretBox');
+            box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
